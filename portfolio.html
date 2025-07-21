@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech Student Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-img {
+            width: 200px; /* Reasonable larger size */
+            height: 200px; /* Maintain square shape */
+            border-radius: 70%;
+            margin-bottom: 20px; /* Space below the image */
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        h2 {
+            color: #40343d;
+            border-bottom: 2px solid #394034;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .list-group-item {
+            background-color: #b7d6df;
+            border: 1px solid #083767;
+            margin-bottom: 10px;
+        }
+
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Profile Section -->
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img src="neelima.jpg" alt="Profile Image" class="profile-img">
+
+                <h1>GORIPARTHI NEELIMA DEVI</h1>
+                <p class="lead">BTech Student in Computer Science</p>
+                <p>Email: 22pa1a0547@vishnu.edu.in</p>
+                <p>Phone: 8179082025</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/goriparthi-neelima-devi-79772b313" target="_blank">linkedin.com/in/goriparthi-neelima-devi</a></p>
+                <p>GitHub: <a href="https://github.com/Vasantha148" target="_blank">github.com/Vasantha148</a></p>
+            </div>
+            <div class="col-md-9">
+                <!-- About Section -->
+                <div class="mt-5">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a passionate and dedicated BTech student in Computer Science at vishnu institute of techmology. I have a strong interest in web development, 
+                        and data science. I am always eager to learn new technologies and apply them to real-world problems.
+                    </p>
+                </div>
+
+                <!-- Education Section -->
+                <div class="mt-5">
+                    <h2>Education</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">BTech in Computer Science, VISHNU INSTITUE OF TECHNOLOGY, 2022 - 2026</li>
+                        <li class="list-group-item">High School, Aditya E.M. High School, at 2020</li>
+                    </ul>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="mt-5">
+                    <h2>Skills</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">Programming: Python</li>
+                                <li class="list-group-item">Web Development: HTML, CSS, JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item">Databases: MySQL, MongoDB</li>
+                                <li class="list-group-item">Tools: Git, Docker</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="mt-5">
+                    <h2>Projects</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h5>Dictionary project in Web Development</h5>
+                            <p>
+                             <a href="https://github.com/Vasantha148/dict-app.git">
+                                The Dictionary App is a web application built with Node.js and Express. It allows users to sign up, log in, and access a dashboard where they can add words and search for their meanings. Key features include User Authentication,Word Search,History Tracking,Views and Templates,Sessions.
+
+
+                             </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="mt-5">
+                    <h2>Contact</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Validate form
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Simulate form submission
+            console.log('Form submitted');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            alert('Thank you for your message!');
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
